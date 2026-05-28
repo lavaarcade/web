@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lava Arcade — Juegos indie desde Lanzarote</title>
+  <meta name="description" content="Juegos indie hechos a mano desde las Islas Canarias. Juega directamente en tu navegador o descarga para Android." />
+  <meta property="og:title" content="Lava Arcade" />
+  <meta property="og:description" content="Juegos indie desde Lanzarote. Sin tiendas, sin esperas." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google AdSense — reemplaza con tu código real -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span>
+        Lava Arcade
+      </a>
+      <ul class="nav-links">
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="#android">Android</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+      </ul>
+      <button class="nav-mobile-btn" aria-label="Menú" onclick="toggleMenu()">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+    <ul class="nav-links-mobile" id="mobileMenu">
+      <li><a href="#juegos" onclick="toggleMenu()">Juegos</a></li>
+      <li><a href="#android" onclick="toggleMenu()">Android</a></li>
+      <li><a href="about.html" onclick="toggleMenu()">Sobre mí</a></li>
+    </ul>
+  </nav>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-val" id="gameCount">1</span>
+      <span class="stat-label">Juegos</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">HTML5</span>
+      <span class="stat-label">Sin instalación</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">APK</span>
+      <span class="stat-label">Para Android</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">Gratis</span>
+      <span class="stat-label">Sin registro</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">Juegos indie · Lanzarote</div>
+    <h1>Juega.<br>Sin <em>filtros.</em></h1>
+    <p>Juegos hechos a mano desde las Islas Canarias. Directamente en tu navegador, sin tiendas, sin esperas.</p>
+  </section>
+
+  <div class="page-layout">
+    <main class="main-content">
+
+      <!-- Banner ad top -->
+      <div class="ad-banner" aria-hidden="true">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+        <span>Publicidad</span>
+      </div>
+
+      <section id="juegos" class="section">
+        <div class="section-header">
+          <span class="section-title">Todos los juegos</span>
+        </div>
+
+        <div class="games-grid" id="gamesGrid">
+
+          <!-- Juego destacado -->
+          <article class="game-card featured" onclick="location.href='games/mixology-ages/index.html'">
+            <div class="play-btn" aria-label="Jugar">
+              <i class="ti ti-player-play"></i>
+            </div>
+            <div class="featured-content">
+              <div class="featured-badge">⬤ Destacado</div>
+              <h2 class="game-title">Mixology Ages</h2>
+              <p class="game-desc">Puzzles de líquidos a través de la historia de los cócteles. Arte Deco, jazz y combinaciones imposibles.</p>
+              <div class="game-meta">
+                <span class="tag tag-genre">Puzzle</span>
+                <span class="tag tag-new">Nuevo</span>
+                <span class="tag tag-html">HTML5</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Placeholder próximo juego -->
+          <article class="game-card coming-soon">
+            <i class="ti ti-plus coming-icon"></i>
+            <span class="coming-label">Próximamente</span>
+          </article>
+
+          <article class="game-card coming-soon">
+            <i class="ti ti-plus coming-icon"></i>
+            <span class="coming-label">En desarrollo</span>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Mid ad -->
+      <div class="ad-banner" aria-hidden="true">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+        <span>Publicidad</span>
+      </div>
+
+      <section id="android" class="section">
+        <div class="section-header">
+          <span class="section-title">Para Android</span>
+        </div>
+        <div class="android-banner">
+          <div class="android-icon">
+            <i class="ti ti-device-mobile"></i>
+          </div>
+          <div class="android-text">
+            <h3>Descarga la app</h3>
+            <p>Todos los juegos en una sola app. Sin Play Store, sin comisiones. Instala la APK directamente.</p>
+          </div>
+          <a href="https://lavaarcade.itch.io" target="_blank" rel="noopener" class="android-btn">
+            Descargar en itch.io <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="sidebar">
+      <!-- Sidebar ad 1 -->
+      <div class="ad-sidebar" aria-hidden="true">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+        <span>Publicidad</span>
+      </div>
+      <!-- Sidebar ad 2 -->
+      <div class="ad-sidebar" style="height:200px;" aria-hidden="true">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+        <span>Publicidad</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">Lava Arcade</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacidad</a>
+      <a href="about.html">Contacto</a>
+      <a href="https://lavaarcade.itch.io" target="_blank" rel="noopener">itch.io</a>
+    </div>
+    <div class="footer-copy">Hecho en Lanzarote 🌋</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
